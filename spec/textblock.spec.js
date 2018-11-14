@@ -1,25 +1,30 @@
-const TextBlock = require('../src/textblock');
+const textBlock = require('../src/textblock');
 
 describe('TextBlock class',  () =>  {
 
   test('TextBlock is defined', function() {
-    expect(TextBlock).toBeDefined();
+    expect(textBlock).toBeDefined();
   });
 
   describe('isPangram()', () => {
     test('isPangram() is defined', () => {
-      const textBlock = new TextBlock('');
+      // const textBlock = new TextBlock('');
 
       expect(textBlock.isPangram).toBeDefined();
     });
 
     test('empty sentence',  () => {
-      const textBlock = new TextBlock('');
+      // don't know classes yet
+      // const textBlock = new TextBlock('');
 
       expect(textBlock.isPangram()).toBe(false);
     });
 
     test('works with a pangram with only lower case', () =>  {
+      textBlock.setup('the quick brown fox jumps over the lazy dog');
+
+      expect(textBlock.isPangram()).toBe(true);
+      expect(textBlock.isPangram()).toBeTruthy();
 
     });
 
