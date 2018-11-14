@@ -36,7 +36,10 @@ describe('TextBlock class',  () =>  {
 
 
     test('pangram with underscores instead of spaces works', function () {
+      textBlock.setup('the_quick_brown_fox_jumps_over_the_lazy_dog');
 
+      expect(textBlock.isPangram()).toBe(true);
+      expect(textBlock.isPangram()).toBeTruthy();
 
     });
 
