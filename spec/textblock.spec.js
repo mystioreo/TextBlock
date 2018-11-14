@@ -29,7 +29,9 @@ describe('TextBlock class',  () =>  {
     });
 
     test("missing character 'x'",  () =>  {
-
+      textBlock.setup('the quick brown fo jumps over the lazy dog');
+      expect(textBlock.isPangram()).toBe(false);
+      expect(textBlock.isPangram()).toBeFalsy();
     });
 
 
